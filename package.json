@@ -1,25 +1,25 @@
 {
-	"name": "hamsket",
-	"productName": "Hamsket",
-	"version": "0.6.5",
-	"description": "Hamsket",
+	"name": "anubis box",
+	"productName": "Anubis Box",
+	"version": "0.6.6",
+	"description": "Anubis Box",
 	"main": "electron/main.js",
 	"private": true,
-	"author": "TheGoddessInari <thegoddessinari@gmail.com>",
+	"author": "BrandonCoburn <brandon@bazingastudios.com>",
 	"license": "GPL-3.0",
 	"engines": {
 		"node": ">=20.0.0"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/TheGoddessInari/hamsket.git"
+		"url": "https://github.com/Brandon-Baz/anubis-box.git"
 	},
 	"bugs": {
-		"url": "https://github.com/TheGoddessInari/hamsket/issues"
+		"url": "https://github.com/Brandon-Baz/anubis-box/issues"
 	},
-	"homepage": "https://github.com/TheGoddessInari/hamsket",
+	"homepage": "https://github.com/Brandon-Baz/anubis-box",
 	"keywords": [
-		"Hamsket",
+		"Anubis Box",
 		"messaging",
 		"app",
 		"slack",
@@ -32,12 +32,12 @@
 		"skype"
 	],
 	"scripts": {
-		"start": "npm run compile && electron build/production/Hamsket",
-		"debug": "electron --inspect build/production/Hamsket",
+		"start": "npm run compile && electron build/production/AnubisBox",
+		"debug": "electron --inspect build/production/AnubisBox",
 		"test": "mocha test/tests/**/*.spec.js",
-		"buildversion": "git show --pretty=\"%h %d %cD\" -s > build/production/Hamsket/BUILDVERSION || node -p -e \"require('./build/production/Hamsket/package.json').version\" > build/production/Hamsket/BUILDVERSION",
+		"buildversion": "git show --pretty=\"%h %d %cD\" -s > build/production/AnubisBox/BUILDVERSION || node -p -e \"require('./build/production/AnubisBox/package.json').version\" > build/production/AnubisBox/BUILDVERSION",
 		"clean": "shx rm -rf ./build/production",
-		"compile": "sencha app build && shx cp package.json package-lock.json build/production/Hamsket/ && npm run buildversion",
+		"compile": "sencha app build && shx cp package.json package-lock.json build/production/AnubisBox/ && npm run buildversion",
 		"recompile": "npm run distclean && npm run compile",
 		"distclean": "shx rm -rf ./dist",
 		"distclean:win": "shx rm -rf ./dist/win-{ia32-,}unpacked",
